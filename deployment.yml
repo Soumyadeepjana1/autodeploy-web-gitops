@@ -1,0 +1,28 @@
+
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: learnora-deployment
+  namespace: learnora
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: learnora
+
+  template:
+    metadata:
+      labels:
+        app: learnora
+
+    spec:
+      containers:
+        - name: learnora
+          image: soumyadeep7872/autodeploy-web:initial
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - containerPort: 80
