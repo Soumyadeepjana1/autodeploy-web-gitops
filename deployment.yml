@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: learnora
-          image: soumyadeep7872/autodeploy-web:577aba1ea151
+          image: soumyadeep7872/autodeploy-web:b78016b887a7
           imagePullPolicy: IfNotPresent
 
           ports:
